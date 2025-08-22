@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<html ng-app>
+<html lang="en">
 <head>
-  <title>Welcome Message</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome</title>
+  <style>
+    body {
+      background-color: #f0f8ff; /* Light blue background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Full viewport height */
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+    .welcome-message {
+      font-size: 3rem;
+      color: #333;
+      padding: 20px 40px;
+      border: 3px solid #007acc;
+      border-radius: 10px;
+      background-color: #e6f2ff;
+      box-shadow: 0 4px 10px rgba(0, 122, 204, 0.3);
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-
-  <div>
-    <input type="text" ng-model="welcomeMessage" placeholder="Type your welcome message" />
-  </div>
-
-  <h1> welcome to my github site </h1>
-
-  <script>
-    // You can initialize the message here if you want
-  </script>
-
+  <div class="welcome-message">Welcome to my site!</div>
 </body>
 </html>
