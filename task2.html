@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="studentApp">
+<head>
+  <title>Student Model Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <style>
+    label {
+      display: inline-block;
+      width: 60px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div ng-controller="StudentController">
+    <h2>Student Details</h2>
+    
+    <label>Name:</label>
+    <input type="text" ng-model="student.name" /><br/>
+
+    <label>Roll:</label>
+    <input type="text" ng-model="student.roll" /><br/>
+
+    <label>Course:</label>
+    <input type="text" ng-model="student.course" /><br/><br/>
+    
+    <h3>Display Student Info:</h3>
+    <p>Name: {{ student.name }}</p>
+    <p>Roll: {{ student.roll }}</p>
+    <p>Course: {{ student.course }}</p>
+  </div>
+
+  <script>
+    angular.module('studentApp', [])
+      .controller('StudentController', function($scope) {
+        $scope.student = {
+          name: 'John Doe',
+          roll: '101',
+          course: 'Computer Science'
+        };
+      });
+  </script>
+
+</body>
+</html>
